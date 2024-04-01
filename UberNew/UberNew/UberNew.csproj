@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22C5ECA6-27B1-4D79-9A0D-B78DDECB2EAB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UberNew</RootNamespace>
+    <AssemblyName>UberNew</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Driver.cs" />
+    <Compile Include="BL\Rider.cs" />
+    <Compile Include="BL\Trip.cs" />
+    <Compile Include="DL\DriverCrud.cs" />
+    <Compile Include="DL\RiderCrud.cs" />
+    <Compile Include="DL\TripCrud.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\AdminHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminHomePage.Designer.cs">
+      <DependentUpon>AdminHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AdminMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminMainPage.Designer.cs">
+      <DependentUpon>AdminMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BookRide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BookRide.Designer.cs">
+      <DependentUpon>BookRide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DriverHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DriverHomePage.Designer.cs">
+      <DependentUpon>DriverHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DriverSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DriverSignIn.Designer.cs">
+      <DependentUpon>DriverSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DriverRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DriverRegistration.Designer.cs">
+      <DependentUpon>DriverRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DriverWaitingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DriverWaitingPage.Designer.cs">
+      <DependentUpon>DriverWaitingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RiderHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RiderHomePage.Designer.cs">
+      <DependentUpon>RiderHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RiderSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RiderSignIn.Designer.cs">
+      <DependentUpon>RiderSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RiderSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RiderSignUp.Designer.cs">
+      <DependentUpon>RiderSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\AdminHomePage.resx">
+      <DependentUpon>AdminHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AdminMainPage.resx">
+      <DependentUpon>AdminMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BookRide.resx">
+      <DependentUpon>BookRide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DriverHomePage.resx">
+      <DependentUpon>DriverHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DriverSignIn.resx">
+      <DependentUpon>DriverSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DriverRegistration.resx">
+      <DependentUpon>DriverRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DriverWaitingPage.resx">
+      <DependentUpon>DriverWaitingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RiderHomePage.resx">
+      <DependentUpon>RiderHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RiderSignIn.resx">
+      <DependentUpon>RiderSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RiderSignUp.resx">
+      <DependentUpon>RiderSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instagram-logo-E0067A1403-seeklogo.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-icon-thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toyota-ae86-car-anime.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toyota-ae86-car-anime1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
